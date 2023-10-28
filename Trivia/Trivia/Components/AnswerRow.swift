@@ -36,6 +36,7 @@ struct AnswerRow: View {
         .foregroundColor(triviaManager.answerSelected ? (isSelected ? Color("customPink") : .gray) : Color("customPink"))
         .background(.white)
         .cornerRadius(10)
+        .shadow(color: triviaManager.answerSelected && answer.isCorrect ? .green : .white, radius: 5, x: 0.5, y: 0.5)
         .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
             if !triviaManager.answerSelected {
